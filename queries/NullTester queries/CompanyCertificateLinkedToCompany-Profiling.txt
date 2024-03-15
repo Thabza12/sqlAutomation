@@ -1,0 +1,1 @@
+"Every Company Certificate Must Link to a Company Profile", [CertificateID], [CompanyID], [ds].[tblCertificate]

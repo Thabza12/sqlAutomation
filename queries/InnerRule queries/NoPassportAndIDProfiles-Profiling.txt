@@ -1,0 +1,19 @@
+"Profiles with No ID\Passport", (select [ProfileID], 1 TargetVal from [ds].[tblProfile]) Targ
+		Left join
+		(select [ProfileID], [IDNo], [PassportNo],
+					case when [IDNo] is null
+					and [PassportNo] is null
+					then 1
+					else 0
+					end as Actual
+
+		from [ds].[tblProfile]
+		group by [ProfileID], [IDNo], [PassportNo]) Act
+		on targ.[ProfileID] = act.[ProfileID]
+	) tbl
+
+
+
+
+
+

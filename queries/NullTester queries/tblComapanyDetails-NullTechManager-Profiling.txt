@@ -1,0 +1,6 @@
+"Company Technical Manager Must Be Populated", [CompanyID], [TechManagerID], [ds].[tblCompanyDetails]
+
+
+
+
+

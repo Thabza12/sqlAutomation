@@ -1,0 +1,14 @@
+"The Registration application should be cancelled after two unsuccessful attempts of Technical Assessments tests", (select [CompanyTestResultsID], 1 TargetVal from [ds].[tblCompanyTestResults]) Targ
+		Left join
+		(select [CompanyTestResultsID], [NoOfAttempts],
+					case when [NoOfAttempts] >= 2
+					then 1
+					else 0
+					end as Actual
+
+		from [ds].[tblCompanyTestResults]
+		group by [CompanyTestResultsID], [NoOfAttempts]) Act
+		on targ.[CompanyTestResultsID] = act.[CompanyTestResultsID]
+	) tbl
+
+

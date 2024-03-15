@@ -1,0 +1,1 @@
+"Banking Particulars Must Be Complete (BankName) from ds.tblBankingDetails", [BankDetailsID], [BankName], [ds].[tblBankingDetails]

@@ -1,0 +1,12 @@
+"The Home Builder can register multiple companies", (select [UserID], 1 TargetVal from [ds].[tblCompanyDetails]) Targ
+		Left join
+		(select [UserID],
+					case when count([UserID]) >= 2	
+					then 1
+					else 0
+					end as Actual
+
+		from [ds].[tblCompanyDetails]
+		group by [UserID]) Act
+		on targ.[UserID] = Act.[UserID]
+	) tbl

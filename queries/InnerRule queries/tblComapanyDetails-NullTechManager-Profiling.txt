@@ -1,0 +1,18 @@
+"Company Technical Manager Must Be Populated", (select [CompanyID], 1 TargetVal from [ds].[tblCompanyDetails]) Targ
+		Left join
+		(select [CompanyID], [TechManagerID],
+					case when [TechManagerID] is null
+					then 0
+					else 1
+					end as Actual
+
+		from [ds].[tblCompanyDetails]
+		group by [CompanyID], [TechManagerID]) Act
+		on targ.[CompanyID] = act.[CompanyID]
+	) tbl
+
+
+
+
+
+

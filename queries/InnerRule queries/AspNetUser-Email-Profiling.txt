@@ -1,0 +1,12 @@
+"The number of Null emails from ds.AspNetUser", (select [Id], 1 TargetVal from [ds].[AspNetUsers]) Targ
+		Left join
+		(select [Id], [Email],
+					case when [Email] is null	
+					then 1
+					else 0
+					end as Actual
+
+		from [ds].[AspNetUsers]
+		group by [Id], [Email]) Act
+		on targ.[Id] = Act.[Id]
+	) tbl

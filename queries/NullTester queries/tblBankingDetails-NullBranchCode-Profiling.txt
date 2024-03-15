@@ -1,0 +1,1 @@
+"Banking Particulars Must Be Complete (BranchCode) from ds.tblBankingDetails", [BankDetailsID], [Code], [ds].[tblBankingDetails]

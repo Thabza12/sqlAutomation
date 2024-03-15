@@ -1,3 +1,20 @@
 RuleName,TargetVal,Actual
+The number of confirmed emails from ds.AspNetUser,37906,0
+The number of Null emails from ds.AspNetUser,37906,0
+The number of null phone numbers from ds.AspNetUser,37906,55
+The number of confirmed phone numbers from ds.AspNetUser,37906,0
+The number of two factor enabled from ds.AspNetUser,37906,0
+All Banking Details Must Link to a UserID,27680,27680
+Every Company Certificate Must Link to a Company Profile,19994,19994
+Profiles with No ID\Passport,912,4
+The system must not display the following information when Sole Trader/Partnership is selected as the entity type: Company details: I.	CIPC Reg number II.	Company name III.	Trading name IV.	Trading start date ,29769,12
+The Home Builder can register multiple companies,29769,8979
+All Banking Details Must Link to a UserID ds.tblBankingDetails,27680,27680
+Company Details Must Link To a Profile,29769,29769
 Banking Particulars Must Be Complete (AccountName) from ds.tblBankingDetails,27680,27572
-Banking Particulars Must Be Complete (AccountName) from ds.tblBankingDetails,27680,27572
+Banking Particulars Must Be Complete (BankName) from ds.tblBankingDetails,27680,0
+Banking Particulars Must Be Complete (BranchCode) from ds.tblBankingDetails,27680,402
+Banking Particulars Must Be Complete (BranchName) from ds.tblBankingDetails,27680,0
+Company Name Must Be Populated,29769,29757
+Company Registration Number Must Be Populated,29769,23793
+Company Technical Manager Must Be Populated,29769,0

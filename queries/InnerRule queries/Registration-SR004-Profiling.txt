@@ -1,0 +1,12 @@
+"The system must allow Proof of banking to be attached if the banking details have changed.", (select [BankDetailsID], 1 TargetVal from [ds].[tblBankingDetails]) Targ
+		Left join
+		(select [BankDetailsID], [CompanyID],
+					case when [CompanyID] is null
+					then 0
+					else 1
+					end as Actual
+
+		from [ds].[tblBankingDetails]
+		group by [BankDetailsID], [CompanyID]) Act
+		on targ.[BankDetailsID] = act.[BankDetailsID]
+	) tbl

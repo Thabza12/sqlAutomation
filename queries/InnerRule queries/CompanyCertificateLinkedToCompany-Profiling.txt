@@ -1,0 +1,13 @@
+"Every Company Certificate Must Link to a Company Profile", (select [CertificateID], 1 TargetVal from [ds].[tblCertificate]) Targ
+		Left join
+		(select [CertificateID], [CompanyID],
+					case when [CompanyID] is null
+					then 0
+					else 1
+					end as Actual
+
+		from [ds].[tblCertificate]
+		group by [CertificateID], [CompanyID]) Act
+		on targ.[CertificateID] = act.[CertificateID]
+	) tbl
+

@@ -1,0 +1,1 @@
+"All Banking Details Must Link to a UserID ds.tblBankingDetails", [BankDetailsID], [UserID], [ds].[tblBankingDetails]

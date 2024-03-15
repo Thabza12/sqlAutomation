@@ -1,0 +1,14 @@
+"The number of confirmed phone numbers from ds.AspNetUser", (select PhoneNumberConfirmed, 1 TargetVal from [ds].[AspNetUsers]) Targ
+		Left join
+		(select PhoneNumberConfirmed,
+					case when PhoneNumberConfirmed = 1	
+					then 1
+					else 0
+					end as Actual
+
+		from [ds].[AspNetUsers]
+		group by PhoneNumberConfirmed) Act
+		on targ.PhoneNumberConfirmed = act.PhoneNumberConfirmed
+	) tbl
+
+
